@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citations de Kaamelott - Contribuez !</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- ********************************************** NAVBAR *************************************************** -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <!-- Item 1 - Hero Banner -->
+            <a class="navbar-brand" href="#">Citations de Kaamelott</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <!-- Item 2 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="accueil.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Item 3 -->
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <!-- Item 4 - Menu déroulant -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Contribuez !
+                        </a>
+                        <ul class="dropdown-menu" id="crud-dropdown-menu">
+                            <li><a class="dropdown-item" href="ajout.html">Ajoutez une citation</a></li>
+                            <li><a class="dropdown-item" href="#">Modifiez une citation</a></li>
+                            <li><a class="dropdown-item" href="#">Supprimez une citation</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ******************************************* FORMULAIRE *********************************************** -->
+        <form action="ajout.js">
+            <!-- Sélection du livre -->
+            <div class="livre-group">
+                <label for="livre">Choisissez le livre de votre citation</label>
+                <select class="form-select my-3" id="livre-select" aria-label="Example select with button addon"
+                    name="livre">
+                    <option selected value="0">Choose...</option>
+                    <option value="1" id="livre-1">Livre I</option>
+                    <option value="2" id="livre-2">Livre II</option>
+                    <option value="3" id="livre-3">Livre III</option>
+                    <option value="4" id="livre-4">Livre IV</option>
+                    <option value="5" id="livre-5">Livre V</option>
+                    <option value="6" id="livre-6">Livre VI</option>
+                    <option value="7" id="livre-7">Premier Volet</option>
+                </select>
+            </div>
+
+            <!-- Sélection de l'épisode -->
+            <div id="episode-group" class="my-3">
+                <label for="episode">Choisissez un épisode</label>
+                <select disabled class="form-select" id="episode-select" aria-label="Example select with button addon"
+                    name="episode">
+                    <option selected value="0">Choose...</option>
+                </select>
+            </div>
+
+            <!-- Sélection du personnage -->
+            <div class="personnage-group" class="my-3">
+                <label for="personnage">Sélectionnez votre personnage</label>
+                <select class="form-select" id="personnage-select" aria-label="Example select with button addon"
+                    name="personnage">
+                    <option selected value="0">Choose...</option>
+                </select>
+            </div>
+
+            <!-- Entrée de la citation -->
+            <div id="citation-area" class="my-3">
+                <label for="citation">Tapez votre citation</label>
+                <textarea name="citation" id="citation-input" cols="80" rows="10"></textarea>
+
+            </div>
+            
+            <!-- Bouton "envoyer" -->
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </form>
+    </main>
+
+    <script src="ajout.js"></script>
+    <script src="navbar.js"></script>
+</body>
+
+</html>

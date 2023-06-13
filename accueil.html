@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citations de Kaamelott - Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <!-- Item 1 - Hero Banner -->
+            <a class="navbar-brand" href="#">Citations de Kaamelott</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <!-- Item 2 -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="accueil.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Item 3 -->
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <!-- Item 4 - Menu déroulant -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Contribuez !
+                        </a>
+                        <ul class="dropdown-menu" id="crud-dropdown-menu">
+                            <li><a class="dropdown-item" href="ajout.html">Ajoutez une citation</a></li>
+                            <li><a class="dropdown-item" href="#">Modifiez une citation</a></li>
+                            <li><a class="dropdown-item" href="#">Supprimez une citation</a></li>
+                        </ul>
+                    </li>
+                    <!-- Item 5 - Menu déroulant -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Affichage par personnage
+                        </a>
+                        <ul class="dropdown-menu" id="personnage-dropdown-menu"></ul>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+
+    <main>
+        <div id="zone-citations">
+            <!-- ESPACE REMPLI PAR LE SCRIPT -->
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary m-3" id="nouvelle-citation">Nouvelle citation</button>
+        </div>
+    </main>
+    <script src="accueil.js"></script>
+    <script src="navbar.js"></script>
+</body>
+
+</html>
